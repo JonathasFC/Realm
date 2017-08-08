@@ -16,22 +16,28 @@ public class Proprietario extends RealmObject implements Serializable{
     private String nome;
     private String endereco;
     private String bairro;
+    private String cidade;
     private String CNH;
     private String telefone;
     private String email;
     private String latitude;
     private String longitude;
 
-    public Proprietario(int id, String nome, String endereco, String bairro, String CNH, String telefone, String email, String latitude, String longitude) {
+    public Proprietario(int id, String nome, String endereco, String bairro, String cidade, String CNH, String telefone, String email, String latitude, String longitude) {
         this.id = id;
         this.nome = nome;
         this.endereco = endereco;
         this.bairro = bairro;
+        this.cidade = cidade;
         this.CNH = CNH;
         this.telefone = telefone;
         this.email = email;
         this.latitude = latitude;
         this.longitude = longitude;
+    }
+
+    public Proprietario() {
+
     }
 
     // Getters
@@ -71,6 +77,8 @@ public class Proprietario extends RealmObject implements Serializable{
         return longitude;
     }
 
+    public String getCidade() {return cidade;}
+
     //Setters
 
     public void setId(int id) {
@@ -108,4 +116,6 @@ public class Proprietario extends RealmObject implements Serializable{
     public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
+
+    public void setCidade(String cidade) {this.cidade = cidade;}
 }

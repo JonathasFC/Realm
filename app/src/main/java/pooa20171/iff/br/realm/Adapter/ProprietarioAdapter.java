@@ -10,13 +10,12 @@ import android.widget.TextView;
 import java.util.List;
 
 import pooa20171.iff.br.realm.Model.Proprietario;
-import pooa20171.iff.br.realm.R;
 
 /**
  * Created by aluno on 07/08/17.
  */
 
-public class ProprietarioAdapter {
+public class ProprietarioAdapter extends RecyclerView.Adapter {
 
     private List<Proprietario> proprietarios;
     private Context context;
@@ -24,7 +23,7 @@ public class ProprietarioAdapter {
 
     public ProprietarioAdapter(List<Proprietario> proprietario, Context context,ClickRecyclerViewListener clickRecyclerViewListener) {
 
-        this.proprietarios = proprietarios;
+        this.proprietarios = proprietario;
         this.context = context;
         this.clickRecyclerViewListener = clickRecyclerViewListener;
     }
